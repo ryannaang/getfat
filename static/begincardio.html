@@ -10,8 +10,8 @@
         padding-bottom: 40px;
       }
       .responsive-table {
-	      width: 100%;
-	      overflow:scroll;
+       width: 100%;
+       overflow:scroll;
       }
     </style>
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
@@ -19,8 +19,8 @@
     
   </head>
   <body ng-controller="BackendController" ng-click="gaEvent($event)">
-  	<!-- Put your own HTML code after this line. Note that Twitter Bootstrap is already setup in this HTML file! -->
-  	<div class="navbar navbar-inverse navbar-fixed-top">
+   <!-- Put your own HTML code after this line. Note that Twitter Bootstrap is already setup in this HTML file! -->
+   <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -50,19 +50,45 @@
     <div class="container-fluid">
       <p><a class="btn btn-primary btn-mini" href="routines.html">Back</a></p>
       <h2>Fat Burner Routine</h2>
-          <p>6 Exercises | 600 Cal Burn</p>
+          <p>4 Exercises | 400 Cal Burn</p>
           <p>Difficulty : Easy</p>
           <p><a class="btn btn-large btn-success" href="#">Record Routine</a></p>
           <div class="bs-docs-example">
-            <p>Exercise 1</p>
+            <ul id="myTab" class="nav nav-tabs">
+              <li class="active"><a href="#step1" data-toggle="tab">Step 1</a></li>
+              <li><a href="#step2" data-toggle="tab">Step 2</a></li>
+              <li class="drop down"
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#dropdown1" data-toggle="tab">@fat</a></li>
+                  <li><a href="#dropdown2" data-toggle="tab">@mdo</a></li>
+                </ul>
+              </li>
+            </ul>
             <div id="myTabContent" class="tab-content">
-              <div class="tab-pane fade in active" id="step1">
+              <div class="tab-pane fade in active" id="Exercise 1">
+              <p1>Squats</p1>
+              <p>3 sets | 12 reps each</p>
                 <p><img src="http://www.thetotaltoner.com/shapefit-pics/bodyweight-exercises/body-movements-squats.gif"/></p>
-                <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
-              </div>
-              <div class="tab-pane fade" id="step2">
-                <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
-              </div>
+                <p>Sit in a low or crouching position with the legs drawn up closely beneath or in front of the body; sit on one's haunches or heels.</p>	
+                </div>
+              <div class="tab-pane fade" id="Exercise 2">
+              <p1>Sit ups</p1>
+              <p>3 sets | 12 reps each</p>
+              <p><img src="http://www.google.com/imgres?hl=en&sa=X&noj=1&biw=1010&bih=610&tbm=isch&tbnid=LMR3-cZBR97boM:&imgrefurl=http://www.shapefit.com/body-weight-exercises-abdominal-sit-ups.html&docid=1VtmPF8R7oAD9M&imgurl=http://www.thetotaltoner.com/shapefit-pics/bodyweight-exercises/abs-exercises-sit-ups.gif&w=320&h=240&ei=mcwoUae-Fo3prQeOh4HIDw&zoom=1&ved=1t:3588,i:162&iact=rc&dur=813&sig=110499508975715790915&page=2&tbnh=192&tbnw=257&start=15&ndsp=14&tx=76&ty=123g"/></p>
+                <p>Sit ups Description</div>
+              <div class="tab-pane fade in active" id="Exercise 3">
+              <p1>Push ups</p1>
+              <p>3 sets | 10 reps each</p>
+                <p><img src="http://skinny2hunk.com/wp-content/uploads/2012/03/wide-push-up1.gif"/></p>
+                <p>Push ups Description</p>
+                </div>
+              <div class="tab-pane fade in active" id="Exercise 4">
+              <p1>Jack Knife</p1>
+              <p>3 sets | 10 reps each</p>
+                <p><img src="http://www.google.com/imgres?hl=en&sa=X&noj=1&biw=1010&bih=610&tbm=isch&tbnid=Z6Vnn-jjngF32M:&imgrefurl=http://s10.photobucket.com/albums/a109/pilsbury629/%3Faction%3Dview%26current%3Dabs-exercises-jackknife-sit-ups.gif%26newest%3D1&docid=wulqBiG03sZWnM&imgurl=http://i10.photobucket.com/albums/a109/pilsbury629/abs-exercises-jackknife-sit-ups.gif&w=320&h=240&ei=mcwoUae-Fo3prQeOh4HIDw&zoom=1&ved=1t:3588,i:192&iact=rc&dur=757&sig=110499508975715790915&page=3&tbnh=177&tbnw=211&start=29&ndsp=17&tx=138&ty=71"/></p>
+                <p>Jack Knife Description</p>
+                </div>
               <div class="tab-pane fade" id="dropdown1">
                 <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
               </div>
@@ -72,11 +98,13 @@
             </div>
           </div>
     </div>
-	    	
-	 <!-- Your own HTML code would end here -->
-	 <!-- Bootstrap Javascript Files-->
-	 <script src="http://code.jquery.com/jquery-latest.js"></script>
+      
+  <!-- Your own HTML code would end here -->
+  <!-- Bootstrap Javascript Files-->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
      <script src="js/bootstrap.min.js"></script>
      <!-- Bootstrap Javascript Files End-->
   </body>
 </html>
+>
+
