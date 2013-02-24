@@ -99,19 +99,6 @@
    }
    </script>
   
-  <div id="login">
-     <p><button onClick="loginUser();">Login</button></p>
-   </div>
-   <div id="logout">
-     <p><button  onClick="FB.logout();">Logout</button></p>
-   </div>
-  
-   <script>
-     function loginUser() {    
-       FB.login(function(response) { }, {scope:'email'});     
-       }
-   </script>
-
     <div class="container">
 
       <form class="form-signin" action="home.html">
@@ -129,7 +116,50 @@
         -->
         <button class="btn btn-large btn-primary" type="submit" >Sign in</button>
       </form>
+      <!-- FACEBOOK LOGIN -->
+         <div id="login">
+           <p><button onClick="loginUser();">Login</button></p>
+         </div>
+         <div id="logout">
+           <p><button  onClick="FB.logout();">Logout</button></p>
+         </div>
+        
+         <script>
+           function loginUser() {    
+             FB.login(function(response) { }, {scope:'email'});     
+             }
+         </script>
+         
+         <div id="user-info"></div>
+         
+         
+          <script>
+              function updateUserInfo(response) {
+                FB.api('/me', function(response) {
+                  document.getElementById('user-info').innerHTML = '<img src="https://graph.facebook.com/' + response.id + '/picture">' + response.name;
+                });
+              }
+            </script>
+            
+            <a href="#" onclick="publishStory();">Publish feed story</a><br>
+          <script>
+          function publishStory() {
+            FB.ui({
+              method: 'feed',
+              name: 'I\'m building a social mobile web app!',
+              caption: 'This web app is going to be awesome.',
+              description: 'Check out Facebook\'s developer site to start building.',
+              link: 'http://www.facebookmobileweb.com/hello',
+              picture: 'http://www.facebookmobileweb.com/hackbook/img/facebook_icon_large.png'
+            }, 
+            function(response) {
+              console.log('publishStory response: ', response);
+            });
+            return false;
+          }
+          </script>
 
+      
     </div> <!-- /container -->
 
     <!-- Le javascript
@@ -149,14 +179,8 @@
     <script src="assets/js/bootstrap-carousel.js"></script>
     <script src="assets/js/bootstrap-typeahead.js"></script>
     
-    <div id="user-info"></div>
-    <script>
-      function updateUserInfo(response) {
-        FB.api('/me', function(response) {
-          document.getElementById('user-info').innerHTML = '<img src="https://graph.facebook.com/' + response.id + '/picture">' + response.name;
-        });
-      }
-    </script>
+    
+
 
   </body>
 </html>
