@@ -1,5 +1,58 @@
 <html>
+  <head>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .responsive-table {
+       width: 100%;
+       overflow:scroll;
+      }
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+  </head>
   <body>
-    <h1>Walkthrough Page</h1>
+     <div class="container-fluid">
+      <p><a class="btn btn-primary btn-mini" href="routines.html">Back</a></p>
+      <h2>Walkthrough Page</h2>
+          <div class="bs-docs-example">
+            <ul id="myTab" class="nav nav-tabs">
+              <li class="active"><a href="#flow1" data-toggle="tab">Flow 1</a></li>
+              <li><a href="#flow2" data-toggle="tab">Flow 2</a></li>
+              <li><a href="#flow3" data-toggle="tab">Step 3</a></li>
+              <li><a href="#flow4" data-toggle="tab">Step 4</a></li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+              <div class="tab-pane fade in active" id="flow1">
+              <p1>1</p1>
+                <p><img src="http://www.catalystspace.com/images/blog/numberone.jpg"/></p>  
+                </div>
+              <div class="tab-pane fade" id="step2">
+              <p1>2</p1>
+                <p><img src="http://seo-hacker.com/wp-content/uploads/2010/04/22.png"/></p>
+                </div>
+              <div class="tab-pane fade in active" id="step3">
+              <p1>3</p1>
+                  <p><img src="http://1.bp.blogspot.com/-Tu31x7U-cuk/UGre7FIrTTI/AAAAAAAAYCg/qEgIlLHYQUg/s1600/3NumberThreeInCircle.png"/></p>
+                </div>
+              <div class="tab-pane fade" id="step4">
+              <p1>4</p1>
+              <p><img src="http://upstarthr.com/wp-content/uploads/2012/03/4-things.jpg"/></p>
+                 </div>
+                </div>
+              
+            </div>
+          </div>
+    </div
+    
+     <!-- Your own HTML code would end here -->
+  <!-- Bootstrap Javascript Files-->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <!-- Bootstrap Javascript Files End-->
   </body>
 </html>
