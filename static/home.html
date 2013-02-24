@@ -35,10 +35,6 @@
         cookie     : true, // enable cookies to allow the server to access the session
         xfbml      : true  // parse XFBML
       });
-      
-      FB.Event.subscribe('auth.login', function () {
-          window.location = "http://mervynlee88.github.com/getfat/static/home.html";
-      });
   
       FB.Event.subscribe('auth.statusChange', handleStatusChange);
     };
@@ -119,7 +115,7 @@
              
            function logoutUser(){
 	    FB.logout();
-	    window.location="index.html";
+	    window.location="http://mervynlee88.github.com/getfat/static/index.html";
 	  }
          </script>
          
