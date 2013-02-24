@@ -74,6 +74,10 @@
         cookie     : true, // enable cookies to allow the server to access the session
         xfbml      : true  // parse XFBML
       });
+      
+      FB.Event.subscribe('auth.login', function () {
+          window.location = "http://mervynlee88.github.com/getfat/static/home.html";
+      });
   
       FB.Event.subscribe('auth.statusChange', handleStatusChange);
     };
