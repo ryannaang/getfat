@@ -88,6 +88,17 @@
      }(document));
   </script>
   
+  <script>
+   function handleStatusChange(response) {
+     document.body.className = response.authResponse ? 'connected' : 'not_connected';
+    
+     if (response.authResponse) {
+       console.log(response);
+       updateUserInfo(response);
+     }
+   }
+   </script>
+  
   <div id="login">
      <p><button onClick="loginUser();">Login</button></p>
    </div>
@@ -137,6 +148,15 @@
     <script src="assets/js/bootstrap-collapse.js"></script>
     <script src="assets/js/bootstrap-carousel.js"></script>
     <script src="assets/js/bootstrap-typeahead.js"></script>
+    
+    <div id="user-info"></div>
+    <script>
+      function updateUserInfo(response) {
+        FB.api('/me', function(response) {
+          document.getElementById('user-info').innerHTML = '<img src="https://graph.facebook.com/' + response.id + '/picture">' + response.name;
+        });
+      }
+    </script>
 
   </body>
 </html>
