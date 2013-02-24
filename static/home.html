@@ -101,7 +101,7 @@
 	       	 <li><a href="distance.html">Distance Tracker</a></li>
 	      	 <li><a href="appointment.html">FAT buddy</a></li>
 	    	 <li><a href="settings.html">Profile</a></li>
-	 	 <li><a href="index.html" onclick="FB.logout();"><font color="red">Logout</font></a></li>
+	 	 <li><a href="index.html" onclick="logoutUser();"><font color="red">Logout</font></a></li>
 	      </ul>
 	      
 	 <!-- FACEBOOK LOGIN -->
@@ -116,6 +116,11 @@
            function loginUser() {    
              FB.login(function(response) { }, {scope:'email'});     
              }
+             
+           function logoutUser(){
+	    FB.logout();
+	    window.location = "index.html";
+	  }
          </script>
          
          <div id="user-info"></div>
