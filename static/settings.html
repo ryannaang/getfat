@@ -72,7 +72,7 @@
 	    	<div class="page-header">
 		    	<h3>Preferences</h3>
 		    	<em>Select preferred units of measurement:</em><br>
-		    	<p>Distance: <label class="radio"><input type="radio" name="optionsRadiosDistance" id="optionsRadiosKm" value="optionKm" checked> km </label> <label class="radio"><input type="radio" name="optionsRadiosDistance" id="optionsRadiosMile" value="optionMile"> mile(s)</label>
+		    	<br><p>Distance: <label class="radio"><input type="radio" name="optionsRadiosDistance" id="optionsRadiosKm" value="optionKm" checked> km </label> <label class="radio"><input type="radio" name="optionsRadiosDistance" id="optionsRadiosMile" value="optionMile"> mile(s)</label>
 	    		</p>
 		    	
 		    	<p>Height: 
@@ -83,6 +83,16 @@
 		    	Weight: 
 		    	<label class="radio"><input type="radio" name="optionsRadiosWeight" id="optionsRadiosKg" value="optionKg" checked> kg </label> <label class="radio"><input type="radio" name="optionsRadiosWeight" id="optionsRadiosLb" value="optionLb"> lb</label>
 	    		</p>
+	    		
+	    		<script>
+				function myFunction()
+				{
+				alert("Hello! I am an alert box!");
+				}
+			</script>
+			<body>
+				<input type="button" onclick="myFunction()" value="Show alert box" />
+			</body>	
 	    	</div>
 	</div><!-- span3 -->
      </div><!-- row-fluid -->	    
@@ -93,5 +103,6 @@
      <script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
      <script type="text/javascript" src="js/jquery-ui-1.10.0.custom.min.js"></script>
      <!-- Bootstrap Javascript Files End-->
+     
   </body>
 </html>
