@@ -1,236 +1,206 @@
 <!doctype html>
 <html>
-  <head>
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-      .responsive-table {
-        width: 100%;
-        overflow:scroll;
-      }
-    </style>
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
-    
-    
-  </head>
-  <body>
+	<head>
+	<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style type="text/css">
+			body {
+				padding-top: 60px;
+				padding-bottom: 40px;
+			}
+			.responsive-table {
+				width: 100%;
+				overflow:scroll;
+			}
+		</style>
+		<link href="css/bootstrap-responsive.css" rel="stylesheet">
+  	</head>
+  
+	<body>
   	<!-- Put your own HTML code after this line. Note that Twitter Bootstrap is already setup in this HTML file! -->
-  	<div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="home.html">Get FAT</a>
-          <div class="nav-collapse collapse">
-            <p class="navbar-text pull-right">
-              Logged in as <a href="#" class="navbar-link">Username</a>
-            </p>
-            <ul class="nav">
-              <li><a href="home.html">Home</a></li>
-              <li><a href="routines.html">Routines</a></li>
-              <li class="active"><a href="distance.html">Distance Tracker</a></li>
-              <li><a href="appointment.html">FAT buddy</a></li>
-              <li><a href="settings.html">Profile</a></li>
-              <li><a href="index.html">Logout</a></li>
-              <!-- <li><a href="#about">Documentation</a></li> -->
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
+  		<div class="navbar navbar-inverse navbar-fixed-top">
+      		<div class="navbar-inner">
+        		<div class="container">
+				  	<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+				  	</a>
+          			<a class="brand" href="home.html">Get FAT</a>
+					<div class="nav-collapse collapse">
+					<p class="navbar-text pull-right">
+						Logged in as <a href="#" class="navbar-link">Username</a>
+					</p>
+					<ul class="nav">
+						<li><a href="home.html">Home</a></li>
+						<li><a href="routines.html">Routines</a></li>
+						<li class="active"><a href="distance.html">Distance Tracker</a></li>
+						<li><a href="appointment.html">FAT buddy</a></li>
+						<li><a href="settings.html">Profile</a></li>
+						<li><a href="index.html">Logout</a></li>
+						<!-- <li><a href="#about">Documentation</a></li> -->
+					</ul>
+          			</div><!--/.nav-collapse -->
+        		</div>
+      		</div>
+    	</div>
     
-    <div class="container-fluid">
-    <div class="row-fluid">
-    	<div class="span3">
-    	<h1>Target run by:</h1>
-    	<div class="accordion" id="accordion2">
-                <div class="accordion-group">
-                  <div class="accordion-heading">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-                      Distance
-                    </a>
-                  </div>
-                  <div id="collapseOne" class="accordion-body collapse in">
-                    <div class="accordion-inner">
-                      <form action= "" method="get">
-                      <select name="Distance">
-			  <option value="0">0</option>
-			  <option value="1">1</option>
-			  <option value="2">2</option>
-			  <option value="3">3</option>
-			  <option value="4">4</option>
-			  <option value="5">5</option>
-			  <option value="6">6</option>
-			  <option value="7">7</option>
-			  <option value="8">8</option>
-			  <option value="9">9</option>
-			  <option value="10">10</option>
-			</select>
-			km <br>
-			<p><a class="btn btn-primary btn-mini" href="beginrun.html">Begin Run</a></p>
+    	<div class="container-fluid">
+    		<div class="row-fluid">
+    			<div class="span3">
+    				<h1>Target run by:</h1>
+    				<div class="accordion" id="accordion2">
+                		<div class="accordion-group">
+                  			<div class="accordion-heading">
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+								  	Distance
+								</a>
+                  			</div>
+                  			<div id="collapseOne" class="accordion-body collapse in">
+                    			<div class="accordion-inner">
+								  	<form action= "beginrun.html" method="get">
+								  		<select name="Distance">
+											<option value="0">0</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+											<option value="6">6</option>
+											<option value="7">7</option>
+											<option value="8">8</option>
+											<option value="9">9</option>
+											<option value="10">10</option>
+										</select>
+										km <br>
+										<p><button class="btn btn-primary btn-mini" type="submit">Begin Run</button></p>
+									</form>
+                    			</div>
+                  			</div>
+                		</div>
+                		
+						<div class="accordion-group">
+						  	<div class="accordion-heading">
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+								  	Time
+								</a>
+						  	</div>
+						  	<div id="collapseTwo" class="accordion-body collapse">
+								<div class="accordion-inner">
+									<form action= "beginrun.html" method="get">
+										<select>
+											<option value="00:00:00">00:00:00</option>
+											<option value="00:10:00">00:10:00</option>
+											<option value="00:20:00">00:20:00</option>
+											<option value="00:30:00">00:30:00</option>
+											<option value="00:40:00">00:40:00</option>
+											<option value="00:50:00">00:50:00</option>
+											<option value="01:00:00">01:00:00</option>
+											<option value="01:10:00">01:10:00</option>
+											<option value="01:20:00">01:20:00</option>
+											<option value="01:30:00">01:30:00</option>
+											<option value="01:40:00">01:40:00</option>
+											<option value="01:50:00">01:50:00</option>
+											<option value="02:00:00">02:00:00</option>
+											<option value="02:10:00">02:10:00</option>
+											<option value="02:20:00">02:20:00</option>
+											<option value="02:30:00">02:30:00</option>
+											<option value="02:40:00">02:40:00</option>
+											<option value="02:50:00">02:50:00</option>
+											<option value="03:00:00">03:00:00</option>
+											<option value="03:10:00">03:10:00</option>
+											<option value="03:20:00">03:20:00</option>
+											<option value="03:30:00">03:30:00</option>
+											<option value="03:40:00">03:40:00</option>
+											<option value="03:50:00">03:50:00</option>
+											<option value="04:00:00">04:00:00</option>
+											<option value="04:10:00">04:10:00</option>
+											<option value="04:20:00">04:20:00</option>
+											<option value="04:30:00">04:30:00</option>
+											<option value="04:40:00">04:40:00</option>
+											<option value="04:50:00">04:50:00</option>
+											<option value="05:00:00">05:00:00</option>
+											<option value="05:10:00">05:10:00</option>
+											<option value="05:20:00">05:20:00</option>
+											<option value="05:30:00">05:30:00</option>
+											<option value="05:40:00">05:40:00</option>
+											<option value="05:50:00">05:50:00</option>
+											<option value="06:00:00">06:00:00</option>
+										</select>
+										hr <br>
+										<p><button class="btn btn-primary btn-mini" type="submit">Begin Run</button></p>
+									</form>
+								</div>
+						  	</div>
+						</div>
+                		
+                		<div class="accordion-group">
+                  			<div class="accordion-heading">
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+								  	Calories
+								</a>
+                  			</div>
+                  			<div id="collapseThree" class="accordion-body collapse">
+                    			<div class="accordion-inner">
+                    				<form action= "beginrun.html" method="get">
+										<select>
+											<option value="0">0</option>
+											<option value="50">50</option>
+											<option value="100">100</option>
+											<option value="150">150</option>
+											<option value="200">200</option>
+											<option value="250">250</option>
+											<option value="300">300</option>
+											<option value="350">350</option>
+											<option value="400">400</option>
+											<option value="450">450</option>
+											<option value="500">500</option>
+											<option value="550">550</option>
+											<option value="600">600</option>
+											<option value="650">650</option>
+											<option value="700">700</option>
+											<option value="750">750</option>
+											<option value="800">800</option>
+											<option value="850">850</option>
+											<option value="900">900</option>
+											<option value="950">950</option>
+											<option value="1000">1000</option>
+											<option value="1050">1050</option>
+											<option value="1100">1100</option>
+											<option value="1150">1150</option>
+											<option value="1200">1200</option>
+											<option value="1250">1250</option>
+											<option value="1300">1300</option>
+											<option value="1350">1350</option>
+											<option value="1400">1400</option>
+											<option value="1450">1450</option>
+											<option value="1500">1500</option>
+											<option value="1550">1550</option>
+											<option value="1600">1600</option>
+											<option value="1650">1650</option>
+											<option value="1700">1700</option>
+											<option value="1750">1750</option>
+											<option value="1800">1800</option>
+											<option value="1850">1850</option>
+											<option value="1900">1900</option>
+											<option value="1950">1950</option>
+											<option value="2000">2000</option>
+										</select>
+										calories <br>
+										<p><button class="btn btn-primary btn-mini" type="submit">Begin Run</button></p>
+									</form>
+                     			</div>
+                  			</div>
+                		</div>
+              		</div><!-- accordion2 -->
+				</div><!-- span3 -->
+     		</div><!-- row-fluid -->	    
+     	</div><!-- containter-fluid -->
 
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-group">
-                  <div class="accordion-heading">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-                      Time
-                    </a>
-                  </div>
-                  <div id="collapseTwo" class="accordion-body collapse">
-                    <div class="accordion-inner">
-                   	 <select>
-			  <option>00:00:00</option>
-			  <option>00:10:00</option>
-			  <option>00:20:00</option>
-			  <option>00:30:00</option>
-			  <option>00:40:00</option>
-			  <option>00:50:00</option>
-			  <option>01:00:00</option>
-			  <option>01:10:00</option>
-			  <option>01:20:00</option>
-			  <option>01:30:00</option>
-			  <option>01:40:00</option>
-			  <option>01:50:00</option>
-			  <option>02:00:00</option>
-			  <option>02:10:00</option>
-			  <option>02:20:00</option>
-			  <option>02:30:00</option>
-			  <option>02:40:00</option>
-			  <option>02:50:00</option>
-			  <option>03:00:00</option>
-			  <option>03:10:00</option>
-			  <option>03:20:00</option>
-			  <option>03:30:00</option>
-			  <option>03:40:00</option>
-			  <option>03:50:00</option>
-			  <option>04:00:00</option>
-			  <option>04:10:00</option>
-			  <option>04:20:00</option>
-			  <option>04:30:00</option>
-			  <option>04:40:00</option>
-			  <option>04:50:00</option>
-			  <option>05:00:00</option>
-			  <option>05:10:00</option>
-			  <option>05:20:00</option>
-			  <option>05:30:00</option>
-			  <option>05:40:00</option>
-			  <option>05:50:00</option>
-			  <option>06:00:00</option>
-			  <option>06:10:00</option>
-			  <option>06:20:00</option>
-			  <option>06:30:00</option>
-			  <option>06:40:00</option>
-			  <option>06:50:00</option>
-			  <option>07:00:00</option>
-			  <option>07:10:00</option>
-			  <option>07:20:00</option>
-			  <option>07:30:00</option>
-			  <option>07:40:00</option>
-			  <option>07:50:00</option>
-			  <option>08:00:00</option>
-			  <option>08:10:00</option>
-			  <option>08:20:00</option>
-			  <option>08:30:00</option>
-			  <option>08:40:00</option>
-			  <option>08:50:00</option>
-			  <option>09:00:00</option>
-			  <option>09:10:00</option>
-			  <option>09:20:00</option>
-			  <option>09:30:00</option>
-			  <option>09:40:00</option>
-			  <option>09:50:00</option>
-			  <option>10:00:00</option>
-			  <option>10:10:00</option>
-			  <option>10:20:00</option>
-			  <option>10:30:00</option>
-			  <option>10:40:00</option>
-			  <option>10:50:00</option>
-			  <option>11:00:00</option>
-			  <option>11:10:00</option>
-			  <option>11:20:00</option>
-			  <option>11:30:00</option>
-			  <option>11:40:00</option>
-			  <option>11:50:00</option>
-			  <option>12:00:00</option>
-			</select>
-			hr <br>
-				<p><a class="btn btn-primary btn-mini" href="beginrun.html">Begin Run</a></p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-group">
-                  <div class="accordion-heading">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-                      Calories
-                    </a>
-                  </div>
-                  <div id="collapseThree" class="accordion-body collapse">
-                    <div class="accordion-inner">
-                    	<select>
-                    		<option>0</option>
-	                     	<option>50</option>
-	                     	<option>100</option>
-	                     	<option>150</option>
-	                     	<option>200</option>
-	                     	<option>250</option>
-	                     	<option>300</option>
-	                     	<option>350</option>
-	                     	<option>400</option>
-	                     	<option>450</option>
-	                     	<option>500</option>
-	                     	<option>550</option>
-	                     	<option>600</option>
-	                     	<option>650</option>
-	                     	<option>700</option>
-	                     	<option>750</option>
-	                     	<option>800</option>
-	                     	<option>850</option>
-	                     	<option>900</option>
-	                     	<option>950</option>
-	                     	<option>1000</option>
-	                     	<option>1050</option>
-	                     	<option>1100</option>
-	                     	<option>1150</option>
-	                     	<option>1200</option>
-	                     	<option>1250</option>
-	                     	<option>1300</option>
-	                     	<option>1350</option>
-	                     	<option>1400</option>
-	                     	<option>1450</option>
-	                     	<option>1500</option>
-	                     	<option>1550</option>
-	                     	<option>1600</option>
-	                     	<option>1650</option>
-	                     	<option>1700</option>
-	                     	<option>1750</option>
-	                     	<option>1800</option>
-	                     	<option>1850</option>
-	                     	<option>1900</option>
-	                     	<option>1950</option>
-	                     	<option>2000</option>
-                     	</select>
-                     	calories <br>
-                     	<p><a class="btn btn-primary btn-mini" href="beginrun.html">Begin Run</a></p>
-                     </div>
-                  </div>
-                </div>
-              </div>
-	</div><!-- span3 -->
-     </div><!-- row-fluid -->	    
-     </div><!-- containter-fluid -->
-	 <!-- Bootstrap Javascript Files-->
-	 <script src="http://code.jquery.com/jquery-latest.js"></script>
-     <script src="js/bootstrap.min.js"></script>
-     <!-- Bootstrap Javascript Files End-->
-  </body>
+		<!-- Bootstrap Javascript Files-->
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<!-- Bootstrap Javascript Files End-->
+  	</body>
 </html>
