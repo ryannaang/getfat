@@ -52,7 +52,25 @@
       <h2>Fat Burner Routine</h2>
           <p>4 Exercises | 400 Total Cal Burn</p>
           <p>Difficulty : Easy</p>
-          <p><a class="btn btn-large btn-success" href="#">Record Routine</a></p>
+          <button onclick="myFunction()">Record Routine</button>
+          
+          <p id="Record"></p>
+          <script>
+            function myFunction(){
+              var x;
+              var r=confirm ("Do you want to record this routine?");
+              if (r==true)
+                {
+                 x="Routine recorded"
+                } 
+              else
+                {
+                  x="";
+                }
+                document.getElementById("Record").innerHTML=x;
+            }
+          </script>
+          
           <div class="bs-docs-example">
             <ul id="myTab" class="nav nav-tabs">
               <li class="active"><a href="#step1" data-toggle="tab">Step 1</a></li>
