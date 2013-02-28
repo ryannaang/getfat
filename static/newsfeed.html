@@ -1,6 +1,10 @@
 <!doctype html>
-<html>
+<html ng-app>
   <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular-resource.min.js"></script>
+<script type = "text/javascript" src="todo.js"</head></script>
+
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +20,8 @@
     </style>
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
     
-    
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "ur-9ff0205d-f375-904a-8ad9-854d2aae876c", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
   </head>
   <body>
     <!-- Put your own HTML code after this line. Note that Twitter Bootstrap is already setup in this HTML file! -->
@@ -56,36 +61,30 @@
 	  <li class="active"><a href="newsfeed.html">Newsfeed</a></li>
 	</ul>
     	</div>
-
-    <div class="hero-unit">
-      <h1>Fat Burner</h1>
-      <p>John just did the fat burner routine</p>
-      <p>
-        <a class="btn btn-info btn-small">Like</a>
-      </p>
-    </div>
+    	<div ng-controller="TodoCrtl">
+    	
+    	<form class="form=horizontal">
+    	<input type="text" ng-model="formTodoText" ng-model-instant>
+    	<button class="btn" ng-click="addTodo()"><i class="icon-plus"></i>Post</button>
+    	
+    	</form>
+    	</div>
+    	
     
     <div class="hero-unit">
-      <h1>8KM Ran</h1>
-      <p>Holly just ran 8KM</p>
-      <p>
-        <a class="btn btn-info btn-small">Like</a>
-      </p>
-    </div>
-    
-    <div class="hero-unit">
-      <h1>1000KM Total Ran</h1>
+      <h1>100KM</h1>
       <p>Grace just hit the 1000KM achievement</p>
       <p>
-        <a class="btn btn-info btn-small">Like</a>
+  <span class='st_facebook_hcount' displayText='Facebook'></span>
+  <span class='st_fblike_hcount' displayText='Facebook Like'></span>
       </p>
     </div>
 
-	</div><!-- span3 -->
+</div><!-- span3 -->
      </div><!-- row-fluid -->	    
      </div><!-- containter-fluid -->
-	 <!-- Bootstrap Javascript Files-->
-	 <script src="http://code.jquery.com/jquery-latest.js"></script>
+<!-- Bootstrap Javascript Files-->
+<script src="http://code.jquery.com/jquery-latest.js"></script>
      <script src="js/bootstrap.min.js"></script>
      <script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
      <script type="text/javascript" src="js/jquery-ui-1.10.0.custom.min.js"></script>
