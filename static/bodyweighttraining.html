@@ -49,30 +49,27 @@
   
     <div class="container-fluid">
       <p><a class="btn btn-primary btn-mini" href="routines.html">Back</a></p>
-      <h2>Fat Burner Routine</h2>
+      <h2>Body Weight Training Routine</h2>
           <p>4 Exercises | 400 Total Cal Burn</p>
           <p>Difficulty : Easy</p>
-          <button onclick="myFunction()">Record Routine</button>
-          
-          <p id="Record"></p>
-          <script>
-            function myFunction(){
-              var x;
-              var r=confirm ("Do you want to record this routine?");
-              if (r==true)
-                {
-                 x="Routine recorded"
-                } 
-              else
-                {
-                  x="";
-                }
-                document.getElementById("Record").innerHTML=x;
-            }
-          </script>
+          <td><button type="button" class="btn btn-success" style="width:100px;" data-toggle="modal" data-target="#recordRoutineModal">Record Routine</button>
+           </td>
+           
+           <div id="recordRoutineModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="recordRoutineModalLabel" aria-hidden="true">
+  				  	<div class="modal-header">
+							<h3 id="recordRoutineModalLabel">Record</h3>
+					  	</div>
+					  	<div class="modal-body">
+							<p>Do you want to record this routine?</p>
+					  	</div>
+					  	<div class="modal-footer">
+							<button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+							<button class="btn btn-primary" class="close" data-dismiss="modal" aria-hidden="true">Confirm</button> 
+					  	</div>
+					</div>
           
           <div class="bs-docs-example">
-            <ul id="myTab" class="nav nav-tabs">
+            <ul id="myTab" class="nav nav-tabs"><br>
               <li class="active"><a href="#step1" data-toggle="tab">Step 1</a></li>
               <li><a href="#step2" data-toggle="tab">Step 2</a></li>
               <li><a href="#step3" data-toggle="tab">Step 3</a></li>
