@@ -52,7 +52,24 @@
       <h2>Fat Burner Routine</h2>
           <p>4 Exercises | 400 Total Cal Burn</p>
           <p>Difficulty : Easy</p>
-          <button onclick="myFunction()">Record Routine</button>
+           <td><button type="button" class="btn btn-success" style="width:90px;" data-toggle="modal" data-target="#recordRoutineModal">Record Routine</button>
+           </td>
+           
+           <div id="recordRoutineModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="recordRoutineModalLabel" aria-hidden="true">
+					  	<div class="modal-header">
+							<h3 id="recordRoutineModalLabel">Record</h3>
+					  	</div>
+					  	<div class="modal-body">
+							<p>Do you want to record this routine?</p>
+					  	</div>
+					  	<div class="modal-footer">
+							<button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+							<button class="btn btn-primary" class="close" data-dismiss="modal" aria-hidden="true">Confirm</button> 
+							<!--record time, distance, calorie and send to Achievment page-->
+					  	</div>
+					</div>
+           
+          <!--<button onclick="myFunction()">Record Routine</button>
           
           <p id="Record"></p>
           <script>
@@ -69,7 +86,7 @@
                 }
                 document.getElementById("Record").innerHTML=x;
             }
-          </script>
+          </script>-->
           
           <div class="bs-docs-example">
             <ul id="myTab" class="nav nav-tabs">
