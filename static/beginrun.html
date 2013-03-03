@@ -159,20 +159,20 @@
     				<h2>Distance Tracker</h2>             			
 					<table cellpadding=3 cellspacing=0 border=0 align=center>
 					<tr>
-						<td colspan=2>
+						<td colspan=1>
 						<input id="clock" type="text" value="00:00:0" style="text-align: center; width:200px; height:100px; font-size:40px"  readonly></td>
-						<td><input id="resetbutton" type="button" class="btn btn-link" value="Reset" style="float:right;" onClick="resetclock();">
+						<!--td><input id="resetbutton" type="button" class="btn btn-link" value="Reset" style="float:right;" onClick="resetclock();"-->
 						</td>
 					</tr>
 					<tr>
-						<td colspan=2>
-						<input id="startstopbutton" type="button" class="btn" value="Pause" style="width:220px;" onClick="startstop();"></td>
+						<td colspan=1>
+						<input id="startstopbutton" type="button" class="btn" value="Pause" style="width:120px;" onClick="startstop();">
 						<!-- Button to trigger modal -->
-						<td><button type="button" class="btn btn-success" style="width:90px;" onClick="startstop();" data-toggle="modal" data-target="#recordRunModal">End Run</button>
+						<button type="button" class="btn btn-success" style="width:90px;" onClick="startstop();" data-toggle="modal" data-target="#recordRunModal">End Run</button>
 						</td>
 					</tr>
-					</table>			
-          			
+					</table>
+					
  					<!-- Modal -->
 					<div id="recordRunModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="recordRunModalLabel" aria-hidden="true">
 					  	<div class="modal-header">
@@ -182,7 +182,7 @@
 							<p>Do you want to record this run?</p>
 					  	</div>
 					  	<div class="modal-footer">
-							<button class="btn" data-dismiss="modal" aria-hidden="true" onClick="startstop();">Cancel</button>
+							<button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
 							<button class="btn btn-primary" class="close" data-dismiss="modal" aria-hidden="true">Confirm</button> 
 							<!--record time, distance, calorie and send to Achievment page-->
 					  	</div>
@@ -191,7 +191,6 @@
 				</div>
 			</div>
 		</div>	
-		
 		
 		<!-- Bootstrap Javascript Files-->
 		<script src="http://code.jquery.com/jquery-latest.js"></script>
