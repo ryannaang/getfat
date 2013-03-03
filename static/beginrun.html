@@ -120,8 +120,46 @@
 					clock.value = "00:00:0";
 				}
 			}
-
 		</script>
+		
+		<script src="http://maps.google.com/maps/api/js?sensor=false">
+		</script>
+		<script type="text/javascript">
+			if (navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(function(position){
+				var latitude = position.coords.latitude;
+				var longitude = position.coords.longitude;
+				var coords = new google.maps.LatLng(latitude, longitude);
+				var mapOptions = {
+					zoom: 15,
+					center: coords,
+					mapTypeControl: true,
+					navigationControlOptions: {
+						style: google.maps.NavigationControlStyle.SMALL
+					},
+					mapTypeId: google.maps.MapTypeId.ROADMAP
+					};
+					map = new google.maps.Map(
+						document.getElementById("mapContainer"), mapOptions
+						);
+					var marker = new google.maps.Marker({
+							position: coords,
+							map: map,
+							title: "Your current location!"
+					});
+ 
+				});
+			}else {
+				alert("Geolocation API is not supported in your browser.");
+			}
+		</script>
+		<style type="text/css">
+		#mapContainer {
+			height: 100%;
+			width: 100%;
+			border: 2px solid #eaeaea;
+		}
+		</style>
   	</head>
   
   	<body onload="startstop();">
@@ -156,11 +194,16 @@
     	<div class="container-fluid">
     		<div class="row-fluid">
       			<div class="span3">
-    				<h2>Distance Tracker</h2>             			
+    				<h2>Distance Tracker</h2> 
+    				            			
+    				<!--Add in distance counter-->
+					<!--Add in calorie counter-->
+					<!--Indication of goal reached-->
+    				            			
 					<table cellpadding=3 cellspacing=0 border=0 align=center>
 					<tr>
 						<td colspan=1>
-						<input id="clock" type="text" value="00:00:0" style="text-align: center; width:200px; height:100px; font-size:40px"  readonly></td>
+						<input id="clock" type="text" value="00:00:0" style="text-align: center; width:200px; height:100px; font-size:40px"  readonly>
 						<!--td><input id="resetbutton" type="button" class="btn btn-link" value="Reset" style="float:right;" onClick="resetclock();"-->
 						</td>
 					</tr>
@@ -171,8 +214,8 @@
 						<button type="button" class="btn btn-success" style="width:90px;" onClick="startstop();" data-toggle="modal" data-target="#recordRunModal">End Run</button>
 						</td>
 					</tr>
-					</table>
-					
+					</table>			
+          			
  					<!-- Modal -->
 					<div id="recordRunModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="recordRunModalLabel" aria-hidden="true">
 					  	<div class="modal-header">
@@ -182,15 +225,18 @@
 							<p>Do you want to record this run?</p>
 					  	</div>
 					  	<div class="modal-footer">
-							<button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-							<button class="btn btn-primary" class="close" data-dismiss="modal" aria-hidden="true">Confirm</button> 
+							<button class="btn" data-dismiss="modal" aria-hidden="true" onClick="startstop();">Cancel</button>
+							<button class="btn btn-primary" class="close" data-dismiss="modal" aria-hidden="true" onClick="resetclock()">Confirm</button> 
 							<!--record time, distance, calorie and send to Achievment page-->
 					  	</div>
 					</div>
-
+					<br>
+					<!--location-based map-->
+					<div id="mapContainer"></div>
 				</div>
 			</div>
 		</div>	
+		
 		
 		<!-- Bootstrap Javascript Files-->
 		<script src="http://code.jquery.com/jquery-latest.js"></script>
