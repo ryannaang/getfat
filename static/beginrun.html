@@ -3,19 +3,16 @@
   	<head>
     <!-- Bootstrap -->
     	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<style type="text/css">
-		body {
-			padding-top: 60px;
-			padding-bottom: 40px;
-		}
-		.responsive-table {
-			width: 100%;
-			overflow:scroll;
-		}
-	</style>
-	<link href="css/bootstrap-responsive.css" rel="stylesheet">
-	
+    	<link href="css/bootstrap-responsive.css" rel="stylesheet">
+    	<style type="text/css">
+      	body {
+        	padding-top: 60px;
+        	padding-bottom: 40px;
+      	}
+      	.responsive-table {
+        	width: 100%;
+       	 	overflow:scroll;
+      	}
     	</style>
     	
 		<script type="text/javascript">
@@ -25,6 +22,8 @@
 			var currenttime;
 			var output;
 			var clock;
+			var distance = document.getElementById('distance');
+			var calories = document.getElementById('calorie');
 
 			function startstop()
 			{
@@ -47,6 +46,7 @@
 
 			function counter(starttime)
 			{
+				distance = document.getElementById('distance');
 				clock = document.getElementById('clock');
 				currenttime = new Date();
 				var timediff = currenttime.getTime() - starttime;
@@ -57,6 +57,8 @@
 				if(flagclock == 1)
 				{
 					clock.value = formattime(timediff,'');
+					distance.value = 0.2*(clock.value.charAt(0)*10 + clock.value.charAt(1) + (clock.value.charAt(3)*10+clock.value.charAt(4))/60);
+					calorie.value = 62 * distance.value;
 					refresh = setTimeout('counter(' + starttime + ');',12);
 				}
 				else
@@ -103,7 +105,7 @@
 					min = 0 + min.charAt(min.length - 1);
 				}
 		
-				return min + ':' + sec + ':' + ds;
+				return min + ':' + sec + ':' + ds;	
 			}
 
 			function resetclock()
@@ -120,6 +122,8 @@
 				else
 				{
 					clock.value = "00:00:0";
+					distance.value = "0";
+					calorie.value = "0";
 				}
 			}
 		</script>
@@ -151,7 +155,7 @@
 			border:2px solid #eaeaea;
 		}
     	</style>
-		
+				
   	</head>
   
   	<body onload="startstop();">
@@ -182,14 +186,15 @@
         		</div>
       		</div>
     	</div>
-  
+    	
     	<div class="container-fluid">
     		<div class="row-fluid">
       			<div class="span3">
     				<h2>Distance Tracker</h2> 
     				            			
+					<!--Indication of goal reached-->
     				            			
-					<table cellpadding=3 cellspacing=0 border=0 align=center>
+					<table cellpadding=3 cellspacing=0 border=0 align=left>
 					<tr>
 						<td>
 						<input id="distance" type="text" value="0" style="text-align:center; width:60px; font-size:15px" readonly> km 
@@ -198,13 +203,13 @@
 						</td>
 					</tr>
 					<tr>
-						<td colspan=1>
+						<td>
 						<input id="clock" type="text" value="00:00:0" style="text-align:center; width:200px; height:100px; font-size:40px" readonly>
 						<!--td><input id="resetbutton" type="button" class="btn btn-link" value="Reset" style="float:right;" onClick="resetclock();"-->
 						</td>
 					</tr>
 					<tr>
-						<td colspan=1>
+						<td>
 						<input id="startstopbutton" type="button" class="btn" value="Pause" style="width:120px;" onClick="startstop();">
 						<!-- Button to trigger modal -->
 						<button type="button" class="btn btn-success" style="width:90px;" onClick="startstop();" data-toggle="modal" data-target="#recordRunModal">End Run</button>
