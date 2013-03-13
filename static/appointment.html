@@ -80,8 +80,9 @@
 	function addName1()
 	{
 	document.getElementById("myname1").innerHTML=',Me';
-	document.getElementById('btn1join').style.visibility = 'hidden';
-	document.getElementById('btn1cancel').style.visibility = 'visible';
+	document.getElementById("btn1join").style.display = "none";
+	//document.getElementById('btn1join').style.visibility = 'hidden';
+	document.getElementById('btn1cancel').style.display = "block";
 	}
 	function addName2()
 	{
@@ -178,7 +179,7 @@
 	      <td>Dan<font id="myname1"></font></td>
 	      <td>
 	      	<button id="btn1join" class="btn btn-small btn-success" type="button" onclick="addName1()">Join</button>
-	      	<button id="btn1cancel" class="btn btn-small btn-danger" type="button" style.visibility = 'hidden' onclick="removeName1()">Cancel</button>
+	      	<button id="btn1cancel" class="btn btn-small btn-danger" type="button" style="display: none;" onclick="removeName1()">Cancel</button>
 	      </td>
 	    </tr>
 	    <tr>
