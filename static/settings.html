@@ -13,12 +13,52 @@
         width: 100%;
         overflow:scroll;
       }
+      body.connected #login { display: none; }
+      body.connected #logout { display: block; }
+      body.not_connected #login { display: block; }
+      body.not_connected #logout { display: none; 
     </style>
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
     
     
   </head>
   <body>
+  
+  <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '298324996959926', // App ID
+        channelUrl : '//WWW.YOUR_DOMAIN.COM/channel.html', // Channel File
+        status     : true, // check login status
+        cookie     : true, // enable cookies to allow the server to access the session
+        xfbml      : true  // parse XFBML
+      });
+  
+      FB.Event.subscribe('auth.statusChange', handleStatusChange);
+    };
+  
+    // Load the SDK Asynchronously
+    (function(d){
+       var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement('script'); js.id = id; js.async = true;
+       js.src = "//connect.facebook.net/en_US/all.js";
+       ref.parentNode.insertBefore(js, ref);
+     }(document));
+  </script>
+  
+  <script>
+   function handleStatusChange(response) {
+     document.body.className = response.authResponse ? 'connected' : 'not_connected';
+    
+     if (response.authResponse) {
+       console.log(response);
+       updateUserInfo(response);
+     }
+   }
+   </script>
+  
     <!-- Put your own HTML code after this line. Note that Twitter Bootstrap is already setup in this HTML file! -->
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
@@ -58,7 +98,58 @@
 	    	</div>
 	    	
 	    	<div class="page-header">
-	    	<h3><img src="https://graph.facebook.com/niMaiJgnA/picture?width=50&height=50"> Leonard Lim</h3>
+	    	<h3>
+	    	<!-- FACEBOOK LOGIN -->
+         <div id="login">
+           <p><button onClick="loginUser();">Login</button></p>
+         </div>
+         <div id="logout">
+           <p><button  onClick="FB.logout();">Logout</button></p>
+         </div>
+        
+         <script>
+           function loginUser() {    
+             FB.login(function(response) { }, {scope:'email'});     
+             }
+             
+           function logoutUser(){
+	    FB.logout();
+	    setTimeout('window.location="http://mervynlee88.github.com/getfat/static/index.html"', 4000);
+	    //window.location="http://mervynlee88.github.com/getfat/static/index.html";
+	  }
+         </script>
+         
+         <div id="user-info"></div>
+         
+         
+          <script>
+              function updateUserInfo(response) {
+                FB.api('/me', function(response) {
+                  document.getElementById('user-info').innerHTML = '<img src="https://graph.facebook.com/' + response.id + '/picture">' + response.name;
+                });
+              }
+            </script>
+            
+            <a href="#" onclick="publishStory();">Publish feed story</a><br>
+          <script>
+          function publishStory() {
+            FB.ui({
+              method: 'feed',
+              name: 'I\'m using GetFAT mobile web app!',
+              caption: 'This web app is going to be awesome.',
+              description: 'Check out Facebook\'s developer site to start building.',
+              link: 'http://www.facebookmobileweb.com/hello',
+              picture: 'http://www.facebookmobileweb.com/hackbook/img/facebook_icon_large.png'
+            }, 
+            function(response) {
+              console.log('publishStory response: ', response);
+            });
+            return false;
+          }
+          </script>
+	    	<!--<img src="https://graph.facebook.com/niMaiJgnA/picture?width=50&height=50"> Leonard Lim
+	    	-->
+	    	</h3>
 	    	<p>Gender: Male </p> <!--<img data-src="https://graph.facebook.com/footeejun?fields=gender">-->
 	    	<p>Height: 170 cm</p>
 	    	<p>Weight: 78 kg</p>
