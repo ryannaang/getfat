@@ -86,10 +86,14 @@
 	function addName2()
 	{
 	document.getElementById("myname2").innerHTML=',Me';
+	document.getElementById('btn2join').style.visibility = 'hidden';
+	document.getElementById('btn2cancel').style.visibility = 'visible';
 	}
 	function addName3()
 	{
 	document.getElementById("myname3").innerHTML=',Me';
+	document.getElementById('btn3join').style.visibility = 'hidden';
+	document.getElementById('btn3cancel').style.visibility = 'visible';
 	}
 	function removeName1()
 	{
@@ -100,10 +104,14 @@
 	function removeName2()
 	{
 	document.getElementById("myname2").innerHTML='';
+	document.getElementById('btn2join').style.visibility = 'visible';
+	document.getElementById('btn2cancel').style.visibility = 'hidden';
 	}
 	function removeName3()
 	{
 	document.getElementById("myname3").innerHTML='';
+	document.getElementById('btn2join').style.visibility = 'visible';
+	document.getElementById('btn2cancel').style.visibility = 'hidden';
 	}
 	</script>
 
@@ -170,7 +178,7 @@
 	      <td>Dan<font id="myname1"></font></td>
 	      <td>
 	      	<button id="btn1join" class="btn btn-small btn-success" type="button" onclick="addName1()">Join</button>
-	      	<button id="btn1cancel" class="btn btn-small btn-danger" type="button" hidden="hidden" onclick="removeName1()">Cancel</button>
+	      	<button id="btn1cancel" class="btn btn-small btn-danger" type="button" style="display: none;" onclick="removeName1()">Cancel</button>
 	      </td>
 	    </tr>
 	    <tr>
@@ -178,7 +186,7 @@
 	      <td>John<font id="myname2"></font></td>
 	      <td>
 	      	<button id="btn2join" class="btn btn-small btn-success" type="button" onclick="addName2()">Join</button>
-	      	<button id="btn2cancel" class="btn btn-small btn-danger" type="button" onclick="removeName2()">Cancel</button>
+	      	<button id="btn2cancel" class="btn btn-small btn-danger" type="button" style="display: none;" onclick="removeName2()">Cancel</button>
 	      		
 	      </td>
 	    </tr>
@@ -187,7 +195,7 @@
 	      <td>James<font id="myname3"></font></td>
 	      <td>
 	      	<button id="btn3join" class="btn btn-small btn-success" type="button" onclick="addName3()">Join</button>
-	      	<button id="btn3cancel" class="btn btn-small btn-danger" type="button" onclick="removeName3()">Cancel</button>
+	      	<button id="btn3cancel" class="btn btn-small btn-danger" type="button" style="display: none;" onclick="removeName3()">Cancel</button>
 	      </td>
 	    </tr>
 	  </tbody>
