@@ -3,7 +3,7 @@
   <head>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular-resource.min.js"></script>
-<script type = "text/javascript" src="todo.js"</head></script>
+<script type = "text/javascript" src="local.js"</head></script>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -22,6 +22,12 @@
     
     <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
 <script type="text/javascript">stLight.options({publisher: "ur-9ff0205d-f375-904a-8ad9-854d2aae876c", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.min.js"></script>
+    <script src="todo.js"></script>
+    <link rel="stylesheet" href="todo.css">
+    	
   </head>
   <body>
     <!-- Put your own HTML code after this line. Note that Twitter Bootstrap is already setup in this HTML file! -->
@@ -60,17 +66,23 @@
 	  <li><a href="appointment.html">Appoinment</a></li>
 	  <li class="active"><a href="newsfeed.html">Newsfeed</a></li>
 	</ul>
-    	</div>
-    	<div ng-controller="TodoCrtl">
     	
-    	<form class="form=horizontal">
-    	<input type="text" ng-model="formTodoText" ng-model-instant>
-    	<button class="btn" ng-click="addTodo()"><i class="icon-plus"></i>Post</button>
-    	
-    	</form>
-    	</div>
-    	
-    
+     <h2>Todo</h2>
+    <div ng-controller="TodoCtrl">
+      <span>{{remaining()}} of {{todos.length}} remaining</span>
+      [ <a href="" ng-click="archive()">archive</a> ]
+      <ul class="unstyled">
+        <li ng-repeat="todo in todos">
+          <input type="checkbox" ng-model="todo.done">
+          <span class="done-{{todo.done}}">{{todo.text}}</span>
+        </li>
+      </ul>
+      <form ng-submit="addTodo()">
+        <input type="text" ng-model="todoText"  size="30"
+               placeholder="add new todo here">
+        <input class="btn-primary" type="submit" value="add">
+      </form>
+    </div>
     <div class="hero-unit">
       <h1>100KM</h1>
       <p>Grace just hit the 1000KM achievement</p>
