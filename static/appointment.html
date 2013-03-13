@@ -75,6 +75,14 @@
 	};
 </script>
 
+	<!-- ADD NAME SCRIPT -->
+  	<script>
+	function addName()
+	{
+	document.getElementById("myname").innerHTML=Mervyn;
+	}
+	</script>
+
   </head>
   <body>
     <!-- Put your own HTML code after this line. Note that Twitter Bootstrap is already setup in this HTML file! -->
@@ -135,8 +143,8 @@
 	  <tbody>
 	    <tr>
 	      <td>0700</td>
-	      <td>Dan</td>
-	      <td><button class="btn btn-small btn-success" type="button">Join</button></td>
+	      <td>Dan<p id="myname"></p></td>
+	      <td><button class="btn btn-small btn-success" type="button" onclick="addName()">Join</button></td>
 	    </tr>
 	    <tr>
 	      <td>0800</td>
