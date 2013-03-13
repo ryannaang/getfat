@@ -89,6 +89,18 @@
 	{
 	document.getElementById("myname3").innerHTML=',Me';
 	}
+	function removeName1()
+	{
+	document.getElementById("myname1").innerHTML='';
+	}
+	function removeName2()
+	{
+	document.getElementById("myname2").innerHTML='';
+	}
+	function removeName3()
+	{
+	document.getElementById("myname3").innerHTML='';
+	}
 	</script>
 
   </head>
@@ -152,17 +164,27 @@
 	    <tr>
 	      <td>1000</td>
 	      <td>Dan<font id="myname1"></font></td>
-	      <td><button class="btn btn-small btn-success" type="button" onclick="addName1()">Join</button></td>
+	      <td>
+	      	<button class="btn btn-small btn-success" type="button" onclick="addName1()">Join</button>
+	      	<button class="btn btn-small btn-danger" type="button" onclick="removeName1()">Cancel</button>
+	      </td>
 	    </tr>
 	    <tr>
 	      <td>1100</td>
 	      <td>John<font id="myname2"></font></td>
-	      <td><button class="btn btn-small btn-success" type="button" onclick="addName2()">Join</button></td>
+	      <td>
+	      	<button class="btn btn-small btn-success" type="button" onclick="addName2()">Join</button>
+	      	<button class="btn btn-small btn-danger" type="button" onclick="removeName2()">Cancel</button>
+	      		
+	      </td>
 	    </tr>
 	    <tr>
 	      <td>1200</td>
 	      <td>James<font id="myname3"></font></td>
-	      <td><button class="btn btn-small btn-success" type="button" onclick="addName3()">Join</button></td>
+	      <td>
+	      	<button class="btn btn-small btn-success" type="button" onclick="addName3()">Join</button>
+	      	<button class="btn btn-small btn-danger" type="button" onclick="removeName3()">Cancel</button>
+	      </td>
 	    </tr>
 	  </tbody>
 	</table>
