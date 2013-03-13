@@ -130,23 +130,6 @@
               }
             </script>
             
-            <a href="#" onclick="publishStory();">Publish feed story</a><br>
-          <script>
-          function publishStory() {
-            FB.ui({
-              method: 'feed',
-              name: 'I\'m using GetFAT mobile web app!',
-              caption: 'This web app is going to be awesome.',
-              description: 'Check out Facebook\'s developer site to start building.',
-              link: 'http://www.facebookmobileweb.com/hello',
-              picture: 'http://www.facebookmobileweb.com/hackbook/img/facebook_icon_large.png'
-            }, 
-            function(response) {
-              console.log('publishStory response: ', response);
-            });
-            return false;
-          }
-          </script>
 	    	<!--<img src="https://graph.facebook.com/niMaiJgnA/picture?width=50&height=50"> Leonard Lim
 	    	-->
 	    	</h3>
