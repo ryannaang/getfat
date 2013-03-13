@@ -80,6 +80,8 @@
 	function addName1()
 	{
 	document.getElementById("myname1").innerHTML=',Me';
+	document.getElementById('btn1join').style.visibility = 'hidden';
+	document.getElementById('btn1cancel').style.visibility = 'visible';
 	}
 	function addName2()
 	{
@@ -165,16 +167,16 @@
 	      <td>1000</td>
 	      <td>Dan<font id="myname1"></font></td>
 	      <td>
-	      	<button class="btn btn-small btn-success" type="button" onclick="addName1()">Join</button>
-	      	<button class="btn btn-small btn-danger" type="button" onclick="removeName1()">Cancel</button>
+	      	<button id="btn1join" class="btn btn-small btn-success" type="button" onclick="addName1()">Join</button>
+	      	<button id="btn1cancel" class="btn btn-small btn-danger" type="button" onclick="removeName1()">Cancel</button>
 	      </td>
 	    </tr>
 	    <tr>
 	      <td>1100</td>
 	      <td>John<font id="myname2"></font></td>
 	      <td>
-	      	<button class="btn btn-small btn-success" type="button" onclick="addName2()">Join</button>
-	      	<button class="btn btn-small btn-danger" type="button" onclick="removeName2()">Cancel</button>
+	      	<button id="btn2join" class="btn btn-small btn-success" type="button" onclick="addName2()">Join</button>
+	      	<button id="btn1cancel" class="btn btn-small btn-danger" type="button" onclick="removeName2()">Cancel</button>
 	      		
 	      </td>
 	    </tr>
@@ -182,8 +184,8 @@
 	      <td>1200</td>
 	      <td>James<font id="myname3"></font></td>
 	      <td>
-	      	<button class="btn btn-small btn-success" type="button" onclick="addName3()">Join</button>
-	      	<button class="btn btn-small btn-danger" type="button" onclick="removeName3()">Cancel</button>
+	      	<button id="btn3join" class="btn btn-small btn-success" type="button" onclick="addName3()">Join</button>
+	      	<button id="btn1cancel" class="btn btn-small btn-danger" type="hidden" onclick="removeName3()">Cancel</button>
 	      </td>
 	    </tr>
 	  </tbody>
