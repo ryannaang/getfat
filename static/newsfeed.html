@@ -27,6 +27,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.min.js"></script>
     <script src="todo.js"></script>
     <link rel="stylesheet" href="todo.css">
+    
+    <!--Javascript add post -->
+   
     	
   </head>
   <body>
@@ -66,32 +69,35 @@
 	  <li><a href="appointment.html">Appoinment</a></li>
 	  <li class="active"><a href="newsfeed.html">Newsfeed</a></li>
 	</ul>
-    	
-     <h2>Todo</h2>
-    <div ng-controller="TodoCtrl">
-      <span>{{remaining()}} of {{todos.length}} remaining</span>
-      [ <a href="" ng-click="archive()">archive</a> ]
-      <ul class="unstyled">
-        <li ng-repeat="todo in todos">
-          <input type="checkbox" ng-model="todo.done">
-          <span class="done-{{todo.done}}">{{todo.text}}</span>
-        </li>
-      </ul>
-      <form ng-submit="addTodo()">
-        <input type="text" ng-model="todoText"  size="30"
-               placeholder="add new todo here">
-        <input class="btn-primary" type="submit" value="add">
-      </form>
-    </div>
+    	  <span id="newpost"></span>
     <div class="hero-unit">
-      <h1>100KM</h1>
-      <p>Grace just hit the 1000KM achievement</p>
+      <p>I just hit the 1000KM achievement</p>
       <p>
   <span class='st_facebook_hcount' displayText='Facebook'></span>
   <span class='st_fblike_hcount' displayText='Facebook Like'></span>
       </p>
     </div>
 
+
+    <div ng-controller="TodoCtrl">     
+      <ul class="unstyled">
+        <li ng-repeat="todo in todos">
+          <div class="hero-unit">
+         <span class="done-{{todo.done}}">{{todo.text}}</span>
+        </li>
+      </ul>
+      
+      <form ng-submit="addTodo()">
+        <input type="text" ng-model="todoText"  size="30"
+               placeholder="add new post here">
+                    <h2>Add a new Post</h2>
+
+        <input class="btn-primary" type="submit" value="add">
+      </form> <!-- input text form -->
+      
+    </div>
+   
+  
 </div><!-- span3 -->
      </div><!-- row-fluid -->	    
      </div><!-- containter-fluid -->
