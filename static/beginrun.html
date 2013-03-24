@@ -108,6 +108,16 @@
 		
 				return min + ':' + sec + ':' + ds;	
 			}
+			
+			function confirmMessage()
+			{
+				<div class="bs-docs-example">
+			            <div class="alert alert-success">
+			              <button type="button" class="close" data-dismiss="alert">&times;</button>
+			              <strong>Well done!</strong> You successfully read this important alert message.
+			            </div>
+			          </div>
+			}
 
 			function resetclock()
 			{
@@ -214,7 +224,8 @@
 						<td>
 						<input id="startstopbutton" type="button" class="btn" value="Pause" style="width:120px;" onClick="startstop();">
 						<!-- Button to trigger modal -->
-						<button type="button" class="btn btn-success" style="width:90px;" onClick="startstop();" data-toggle="modal" data-target="#recordRunModal">End Run</button>
+						<button type="button" class="btn btn-success" style="width:90px;" onClick="startstop();" data-toggle="modal" data-target="#
+						RunModal">End Run</button>
 						</td>
 					</tr>
 					</table>			
