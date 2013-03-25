@@ -54,8 +54,10 @@
           <p>4 Exercises | 400 Total Cal Burn</p>
           <p>Difficulty : Easy</p>
            
+ <button type="button" class="btn btn-success" data-toggle="modal" data-target="#recordRoutineModal">Record Routine</button>
+           
            <div id="recordRoutineModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="recordRoutineModalLabel" aria-hidden="true">
-					  	<div class="modal-header">
+  				  	<div class="modal-header">
 							<h3 id="recordRoutineModalLabel">Record</h3>
 					  	</div>
 					  	<div class="modal-body">
@@ -63,7 +65,7 @@
 					  	</div>
 					  	<div class="modal-footer">
 							<button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-							<button class="btn btn-primary" class="close" data-dismiss="modal" aria-hidden="true">Confirm</button> 
+							<button class="btn btn-primary" class="close" data-dismiss="modal" aria-hidden="true" onClick="alert('Your routine has been recorded successfully!')">Confirm</button> 
 					  	</div>
 					</div>
            
