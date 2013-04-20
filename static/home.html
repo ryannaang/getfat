@@ -79,7 +79,6 @@
               <li><a href="routines.html">Routines</a></li>
               <li><a href="distance.html">Distance Tracker</a></li>
               <li><a href="appointment.html">FAT buddy</a></li>
-              <li><a href="newsfeed.html">Social Sharing</a></li>
               <li><a href="settings.html">Profile</a></li>
               <li><a href="#" onclick="logoutUser();">Logout</a></li>
               <!-- <li><a href="#about">Documentation</a></li> -->
@@ -97,7 +96,6 @@
 	      	 <li><a href="routines.html">Routines</a></li>
 	       	 <li><a href="distance.html">Distance Tracker</a></li>
 	      	 <li><a href="appointment.html">FAT buddy</a></li>
-	 	 <li><a href="newsfeed.html">Social Sharing</a></li>
 	    	 <li><a href="settings.html">Profile</a></li>
 	 	 <li><a href="#" onclick="logoutUser();"><font color="red">Logout</font></a></li>
 	      </ul>
@@ -134,7 +132,23 @@
               }
             </script>
             
-           
+            <a href="#" onclick="publishStory();">Share our application!</a><br>
+          <script>
+          function publishStory() {
+            FB.ui({
+              method: 'feed',
+              name: 'I\'m using GetFAT mobile web app!',
+              caption: 'This web app is going to be awesome.',
+              description: 'Check out Facebook\'s developer site to start building.',
+              link: 'http://www.facebookmobileweb.com/hello',
+              picture: 'http://www.facebookmobileweb.com/hackbook/img/facebook_icon_large.png'
+            }, 
+            function(response) {
+              console.log('publishStory response: ', response);
+            });
+            return false;
+          }
+          </script>
 
 	</div><!-- span3 -->
      </div><!-- row-fluid -->
