@@ -136,7 +136,6 @@
               <li><a href="routines.html">Routines</a></li>
               <li><a href="distance.html">Distance Tracker</a></li>
               <li class="active"><a href="appointment.html">FAT buddy</a></li>
-               <li><a href="newsfeed.html">Social Sharing</a></li>
               <li><a href="settings.html">Profile</a></li>
               <li><a href="index.html">Logout</a></li>
               <!-- <li><a href="#about">Documentation</a></li> -->
@@ -150,6 +149,10 @@
     <div class="row-fluid">
     	<div class="span3">
     	<div style="align: center">
+    	<ul class="nav nav-pills">
+	  <li class="active"><a href="appointment.html">Appointment</a></li>
+	  <li><a href="newsfeed.html">Newsfeed</a></li>
+	</ul>
     	</div>
     	
     	<!-- Datepicker -->
@@ -174,16 +177,16 @@
 	      <td>1000</td>
 	      <td>Dan<font id="myname1"></font></td>
 	      <td>
-	      	<button id="btn1join" class="btn btn-small btn-success" type="button" onclick="alert('You have successfully joined your buddy!');addName1()">Join</button>
-	      	<button id="btn1cancel" class="btn btn-small btn-danger" type="button" style="display: none;" onclick="alert('You have successfully cancelled your appointment!');removeName1()">Cancel</button>
+	      	<button id="btn1join" class="btn btn-small btn-success" type="button" onclick="addName1()">Join</button>
+	      	<button id="btn1cancel" class="btn btn-small btn-danger" type="button" style="display: none;" onclick="removeName1()">Cancel</button>
 	      </td>
 	    </tr>
 	    <tr>
 	      <td>1100</td>
 	      <td>John<font id="myname2"></font></td>
 	      <td>
-	      	<button id="btn2join" class="btn btn-small btn-success" type="button" onclick="alert('You have successfully joined your buddy!');addName2()">Join</button>
-	      	<button id="btn2cancel" class="btn btn-small btn-danger" type="button" style="display: none;" onclick="alert('You have successfully cancelled your appointment!');removeName2()">Cancel</button>
+	      	<button id="btn2join" class="btn btn-small btn-success" type="button" onclick="addName2()">Join</button>
+	      	<button id="btn2cancel" class="btn btn-small btn-danger" type="button" style="display: none;" onclick="removeName2()">Cancel</button>
 	      		
 	      </td>
 	    </tr>
@@ -191,8 +194,8 @@
 	      <td>1200</td>
 	      <td>James<font id="myname3"></font></td>
 	      <td>
-	      	<button id="btn3join" class="btn btn-small btn-success" type="button" onclick="alert('You have successfully joined your buddy!');addName3()">Join</button>
-	      	<button id="btn3cancel" class="btn btn-small btn-danger" type="button" style="display: none;" onclick="alert('You have successfully cancelled your appointment!');removeName3()">Cancel</button>
+	      	<button id="btn3join" class="btn btn-small btn-success" type="button" onclick="addName3()">Join</button>
+	      	<button id="btn3cancel" class="btn btn-small btn-danger" type="button" style="display: none;" onclick="removeName3()">Cancel</button>
 	      </td>
 	    </tr>
 	  </tbody>
