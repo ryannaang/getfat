@@ -15,7 +15,7 @@
 			}
 		</style>
 		<link href="css/bootstrap-responsive.css" rel="stylesheet">
-
+	    	
 		<script type="text/javascript">
 			var flagclock = 0;
 			var flagstop = 0;
@@ -81,7 +81,7 @@
 				}
 				var sec = Math.floor(rawtime/1000);
 				var min = Math.floor(rawtime/60000);
-
+				
 				ds = ds.charAt(ds.length - 1);
 				if(min >= 60)
 				{
@@ -105,7 +105,7 @@
 				{
 					min = 0 + min.charAt(min.length - 1);
 				}
-
+		
 				return min + ':' + sec + ':' + ds;	
 			}
 
@@ -128,7 +128,7 @@
 				}
 			}
 		</script>
-
+		
 		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 		<script>
 		  var map;
@@ -148,7 +148,7 @@
 		  }
 		  google.maps.event.addDomListener(window, 'load', initialize);
 		</script>
-
+		
 		<style type="text/css">
 		#map_canvas {
       		height: 250px;
@@ -156,7 +156,7 @@
 			border:2px solid #eaeaea;
 		}
     		</style>
-
+				
   	</head>
   
   	<body onload="startstop();">
@@ -179,7 +179,6 @@
               			<li><a href="routines.html">Routines</a></li>
               			<li class="active"><a href="distance.html">Distance Tracker</a></li>
               			<li><a href="appointment.html">FAT buddy</a></li>
-              			 <li><a href="newsfeed.html">Social Sharing</a></li>
               			<li><a href="settings.html">Profile</a></li>
               			<li><a href="index.html">Logout</a></li>
               			<!-- <li><a href="#about">Documentation</a></li> -->
@@ -229,7 +228,7 @@
 					  	</div>
 					  	<div class="modal-footer">
 							<button class="btn" data-dismiss="modal" aria-hidden="true" onClick="startstop();">Cancel</button>
-							<button class="btn btn-primary" class="close" data-dismiss="modal" aria-hidden="true" onClick="resetclock();alert('Your distance track has been recorded successfully!')">Confirm</button> 
+							<button class="btn btn-primary" class="close" data-dismiss="modal" aria-hidden="true" onClick="resetclock();">Confirm</button> 
 							<!--record time, distance, calorie and send to Achievment page-->
 					  	</div>
 					</div>
@@ -239,8 +238,8 @@
 				</div>
 			</div>
 		</div>	
-
-
+		
+		
 		<!-- Bootstrap Javascript Files-->
 		<script src="http://code.jquery.com/jquery-latest.js"></script>
 		<script src="js/bootstrap.min.js"></script>
